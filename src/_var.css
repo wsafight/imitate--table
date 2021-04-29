@@ -1,0 +1,44 @@
+/* @dependent: ./index.less */
+:root {
+    --line-height: 1.8;
+
+    --duration: 0.25s;
+    --color-brand: #06f;
+    --color-brand-darken: #034fc2;
+    --color-brand-light: #1d77ff;
+    --color-brand-hover: #0e63e2;
+    --color-brand-selection: #a0a0a0;
+
+    --color-primary: #333;
+    --color-secondary: #666;
+    --color-third: #999;
+
+    --color-hover: #f0f0f0;
+    /* 边框色 */
+    --color-border: #e6e6e6;
+    /*    边框hover*/
+    --color-border-hover: #ccc;
+    /*    背景色*/
+    --color-bg: #ccc;
+    /*    背景hover*/
+    --color-bg-hover: #a0a0a0;
+
+    --color-error: #a62a22;
+    --color-disabled: #fbfbfb;
+    /*默认字号*/
+    --font-size: 14px;
+    /* //24px;//输入或下拉框高度*/
+    --input-height: --font-size / 0.5833;
+    --input-width: 140px;
+
+    --border-radius: 4px;
+
+    --placeholder-color: #999;
+
+    --menu-item-height: 26px;
+
+    /*我们需要一个反差的颜色*/
+    --contrast-color: #5665EB;
+    --contrast-color-darken: #4D4FA8;
+
+}
