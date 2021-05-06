@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import logo from './logo.svg'
 import './App.css'
-import {Resizable} from 'react-resizable'
+import {Resizable, ResizeCallbackData} from 'react-resizable'
 
 function App() {
     const [column, setColumn] = useState([
@@ -17,10 +16,10 @@ function App() {
         }
     ])
 
-    const handleResize = (index: number) => (e: any, aaa: any) => {
+    const handleResize = (index: number) => (_: any, {size}: ResizeCallbackData) => {
         column[index] = {
             ...column[index],
-            width: aaa.size.width
+            width: size.width
         }
         setColumn([...column])
     }
