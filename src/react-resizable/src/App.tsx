@@ -17,8 +17,13 @@ function App() {
         }
     ])
 
-    const handleResize = (e: any) => {
-        console.log(e)
+    const handleResize = (index: number) => (e: any, aaa: any) => {
+        console.log(e, aaa)
+        column[index] = {
+            ...column[index],
+            width: aaa.size.width
+        }
+        setColumn([...column])
     }
 
 
@@ -27,21 +32,30 @@ function App() {
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <p>Hello Vite + React!</p>
-                <table>
+                <table border={1}>
                     <thead>
-                    {
-                        column.map(({head, key, width}, index) => (
-                            <Resizable
-                                key={key}
-                                width={width}
-                                height={0}
-                                onResize={handleResize}
-                            >
-                                <th>{head}</th>
-                            </Resizable>
-                        ))
-                    }
+                    <tr>
+                        {
+                            column.map(({head, key, width}, index) => (
+                                <Resizable
+                                    key={key}
+                                    width={width}
+                                    height={0}
+                                    onResize={handleResize(index)}
+                                >
+                                    <th width={width}>{head}</th>
+                                </Resizable>
+                            ))
+                        }
+                    </tr>
                     </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+
                 </table>
             </header>
         </div>
