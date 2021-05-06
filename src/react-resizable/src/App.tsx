@@ -17,6 +17,7 @@ function App() {
     ])
 
     const handleResize = (index: number) => (_: any, {size}: ResizeCallbackData) => {
+        console.log(size)
         column[index] = {
             ...column[index],
             width: size.width
@@ -35,7 +36,7 @@ function App() {
                             <Resizable
                                 key={key}
                                 width={width}
-                                height={0}
+                                height={20}
                                 onResize={handleResize(index)}
                             >
                                 <th width={width}>{head}</th>
